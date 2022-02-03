@@ -1,0 +1,24 @@
+﻿<Window x:Class="MessengerClient.Chat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MessengerClient"
+        mc:Ignorable="d"
+        Title="Kursach Messenger" Height="479" Width="828" Foreground="#FF323232">
+    <Grid Margin="0,10,0,4" Background="#FF464646">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="227*"/>
+            <RowDefinition Height="232*"/>
+        </Grid.RowDefinitions>
+        <RichTextBox x:Name="ChatWindow" Margin="10,10,10,50" IsReadOnly="True" TextChanged="RichTextBox_TextChanged" Grid.RowSpan="2" Background="#FF555555" Foreground="White">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox x:Name="SendMsgBox" Margin="10,0,127,10" Text="Введите сюда сообщение..." TextWrapping="Wrap" Height="32" VerticalAlignment="Bottom" Grid.Row="1" Background="#FF515151" Foreground="White"/>
+        <Button x:Name="Send" Content="Отправить" Margin="0,0,10,10" Click="Button_Click" Height="32" VerticalAlignment="Bottom" Grid.Row="1" HorizontalAlignment="Right" Width="94" Background="#FF6A6A6A" Foreground="White"/>
+    </Grid>
+</Window>
